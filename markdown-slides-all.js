@@ -76,6 +76,7 @@ function setupSlides() {
     html: true,
     linkify: true,
     langPrefix: 'lang-',
+    breaks: true,
   });
 
   var markdownSlides = markdownText.split("---");
