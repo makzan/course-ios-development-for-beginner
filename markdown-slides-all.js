@@ -53,7 +53,7 @@ function getUrlVars()
 
 var queryParams = getUrlVars();
 var md_file = "sample.md";
-if (queryParams["md"] != null) {
+if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
 
