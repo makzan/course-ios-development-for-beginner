@@ -167,11 +167,19 @@ main.slides {
 .slide-content ul:nth-last-child(1):first-child {
   font-size: 1.8em;
 }
+
+.slide-content ol:nth-last-child(1):first-child li:nth-last-child(n+5):first-child,
+.slide-content ol:nth-last-child(1):first-child li:nth-last-child(n+5):first-child ~ li,
+.slide-content ul:nth-last-child(1):first-child li:nth-last-child(n+5):first-child,
+.slide-content ul:nth-last-child(1):first-child li:nth-last-child(n+5):first-child ~ li {
+  font-size: .6em;
+}
+
 .slide-content ol:nth-last-child(1):first-child li:nth-last-child(n+6):first-child,
 .slide-content ol:nth-last-child(1):first-child li:nth-last-child(n+6):first-child ~ li,
 .slide-content ul:nth-last-child(1):first-child li:nth-last-child(n+6):first-child,
 .slide-content ul:nth-last-child(1):first-child li:nth-last-child(n+6):first-child ~ li {
-  font-size: .8em;
+  font-size: .5em;
 }
 
 .teaching-caption {
