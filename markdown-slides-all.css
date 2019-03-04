@@ -18,7 +18,7 @@
 
 body {
   font-family: sans-serif;
-  max-width: 800px;
+  max-width: 1200px;
   margin: auto;
   padding-top: 1em;
 }
@@ -75,7 +75,7 @@ main.slides {
   overflow: hidden;
   padding: 0 1.8em;
 }
-@media screen and (min-width: 1000px) {
+/*@media screen and (min-width: 1000px) {
   .swiper-slide {
     font-size: 1.5vw;
   }
@@ -84,7 +84,7 @@ main.slides {
   .swiper-slide {
     font-size: 1vw;
   }
-}
+}*/
 .swiper-slide p {
   max-height: 100%;
 }
@@ -157,10 +157,10 @@ main.slides {
   bottom: 0;
   left: 0;
 }
-.slide-content :nth-last-child(1):first-child {
+.slide-content > :nth-last-child(1):first-child {
   font-size: 1.8em;
 }
-.slide-content :nth-last-child(1):nth-child(2):first-of-type {
+.slide-content > :nth-last-child(1):nth-child(2):first-of-type {
   font-size: 1.5em;
 }
 .slide-content ol:nth-last-child(1):first-child,
