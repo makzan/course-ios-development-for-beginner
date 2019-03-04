@@ -63,111 +63,111 @@ $.get("/" + md_file, function(data){
 });
 
 function setupSlides() {
-$("body").append(`<main class="slides reading-mode">
-  <div class="swiper-wrapper"></div>
-  <div class="swiper-scrollbar"></div>
-  <div class="swiper-pagination"></div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-button-next"></div>
-</main>`);
+  $("body").append(`<main class="slides reading-mode">
+    <div class="swiper-wrapper"></div>
+    <div class="swiper-scrollbar"></div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+  </main>`);
 
-var markdownText = $("textarea").val();
-var md = window.markdownit({
-  html: true
-});
+  var markdownText = $("textarea").val();
+  var md = window.markdownit({
+    html: true
+  });
 
-var markdownSlides = markdownText.split("---");
+  var markdownSlides = markdownText.split("---");
 
-index = 1;
-for (var slideText of markdownSlides) {
-  index += 1;
-  var result = md.render(slideText);
-  $("main.slides > .swiper-wrapper").append(`<section class='swiper-slide' data-hash="slide-${index}"><div class='slide-caption'></div><div class='slide-content'>${result}</div></section>`);
-}
+  index = 1;
+  for (var slideText of markdownSlides) {
+    index += 1;
+    var result = md.render(slideText);
+    $("main.slides > .swiper-wrapper").append(`<section class='swiper-slide' data-hash="slide-${index}"><div class='slide-caption'></div><div class='slide-content'>${result}</div></section>`);
+  }
 
 
-var swiper = new Swiper('main.slides', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'progressbar',
-    // type: 'bullets',
-    // dynamicBullets: true,
-    // dynamicMainBullets: 3,
-    // clickable: true
-  },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-    draggable: true,
-    snapOnRelease: true,
-    hide: false,
-  },
-  simulateTouch: false,
-  keyboard: {
-    enabled: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  hashNavigation: {
-    replaceState: true,
-    watchState: true
-  },
-  // history: {
-  //   replaceState: false,
-  // },
-  on: {
-    init: function () {
-      // set caption
-      $(".swiper-slide").each(function(){
-        var slide = $(this);
+  var swiper = new Swiper('main.slides', {
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'progressbar',
+      // type: 'bullets',
+      // dynamicBullets: true,
+      // dynamicMainBullets: 3,
+      // clickable: true
+    },
+    scrollbar: {
+      el: '.swiper-scrollbar',
+      draggable: true,
+      snapOnRelease: true,
+      hide: false,
+    },
+    simulateTouch: false,
+    keyboard: {
+      enabled: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    hashNavigation: {
+      replaceState: true,
+      watchState: true
+    },
+    // history: {
+    //   replaceState: false,
+    // },
+    on: {
+      init: function () {
+        // set caption
+        $(".swiper-slide").each(function(){
+          var slide = $(this);
 
-        slide.find(".slide-content > p").each(function(){
-          if ($(this).text()[0] == "^") {
-            var element = $("<p class='caption'>"+ $(this).text().substring(1,9999) +"</p>");
-            $(this).remove();
+          slide.find(".slide-content > p").each(function(){
+            if ($(this).text()[0] == "^") {
+              var element = $("<p class='caption'>"+ $(this).text().substring(1,9999) +"</p>");
+              $(this).remove();
 
-            slide.find(".slide-caption").append(element);
+              slide.find(".slide-caption").append(element);
+
+            }
+          });
+        });
+        
+        // set meta background opacity.
+        $(".slide-meta[data-opacity]").each(function() {
+          var opacity = $(this).data('opacity');
+          console.log(opacity);
+          $(this).parents(".swiper-slide").find(".slide-background").css('opacity', opacity);
+        });
+
+        // merge teaching captions.
+        $(".swiper-slide").each(function() {
+          if ($(this).find(".teaching-caption").length > 1) {
+            var first = $(this).find(".teaching-caption").get(0);
+            $(this).find(".teaching-caption").each(function() {
+              if (this != first) {
+                $(first).append( "<br>" + $(this).html() );
+                $(this).remove();
+              }
+            });
 
           }
         });
-      });
-      
-      // set meta background opacity.
-      $(".slide-meta[data-opacity]").each(function() {
-        var opacity = $(this).data('opacity');
-        console.log(opacity);
-        $(this).parents(".swiper-slide").find(".slide-background").css('opacity', opacity);
-      });
 
-      // merge teaching captions.
-      $(".swiper-slide").each(function() {
-        if ($(this).find(".teaching-caption").length > 1) {
-          var first = $(this).find(".teaching-caption").get(0);
-          $(this).find(".teaching-caption").each(function() {
-            if (this != first) {
-              $(first).append( "<br>" + $(this).html() );
-              $(this).remove();
-            }
-          });
+        // move all meta DOM into .meta
+        $(".swiper-slide").each(function() {
+          var bg = $(this).find(".bg");
+          var meta = $(this).find(".meta");
 
-        }
-      });
-
-      // move all meta DOM into .meta
-      $(".swiper-slide").each(function() {
-        var bg = $(this).find(".bg");
-        var meta = $(this).find(".meta");
-
-        $(this).find(".slide-background-container").appendTo(bg);
-        $(this).find(".slide-meta").appendTo(meta);
-        $(this).find(".caption").appendTo(meta);
-        $(this).find(".teaching-caption").appendTo(meta);
-      });
-      
-      
+          $(this).find(".slide-background-container").appendTo(bg);
+          $(this).find(".slide-meta").appendTo(meta);
+          $(this).find(".caption").appendTo(meta);
+          $(this).find(".teaching-caption").appendTo(meta);
+        });
+        
+        
+      },
     },
-  },
-});
-
+  });
+}
 
