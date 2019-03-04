@@ -34,7 +34,35 @@
 //# sourceMappingURL=swiper.min.js.map
 
 
+// Read a page's GET URL variables and return them as an associative array.
+// https://stackoverflow.com/a/4656873
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
 // Markdown Slides Player
+
+var queryParams = getUrlVars();
+var md_file = "sample.md";
+if (queryParams["md"] != null) {
+  md_file = queryParams["md"];
+}
+
+$.get("/" + md_file, function(data){
+  $("textarea.raw-markdown").text(data);
+  setupSlides();
+});
+
+function setupSlides() {
 $("body").append(`<main class="slides reading-mode">
   <div class="swiper-wrapper"></div>
   <div class="swiper-scrollbar"></div>
@@ -103,47 +131,8 @@ var swiper = new Swiper('main.slides', {
 
           }
         });
-
       });
-    },
-  },
-});
-
-
-
-/* global jQuery */
-
-// Read a page's GET URL variables and return them as an associative array.
-// https://stackoverflow.com/a/4656873
-function getUrlVars()
-{
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++)
-    {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-
-;(function($){
-
-  $(document).on("ready", function(){
-    
-    var queryParams = getUrlVars();
-    var md_file = "sample.md";
-    if (queryParams["md"] != null) {
-      md_file = queryParams["md"];
-    }
-
-    $.get("/" + md_file, function(data){
-      $("textarea.raw-markdown").text(data);
-      setupSlides();
-    });
-    
-    function setupSlides() {
+      
       // set meta background opacity.
       $(".slide-meta[data-opacity]").each(function() {
         var opacity = $(this).data('opacity');
@@ -175,10 +164,10 @@ function getUrlVars()
         $(this).find(".caption").appendTo(meta);
         $(this).find(".teaching-caption").appendTo(meta);
       });
-    }    
+      
+      
+    },
+  },
+});
 
-  });
 
-
-
-})(jQuery);
