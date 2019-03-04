@@ -163,6 +163,26 @@ iOS 2.0 SDK
 
 ---
 
+# iOS Simulator
+
+![](/slides/images/ios-simulator.jpg)
+
+---
+
+在我們落實體機試之前，我們一般會利用 Xcode 跟來的模擬器進行測試。
+
+---
+
+![](/slides/images/ios-simulator-choices.jpg)
+
+---
+
+iOS Simulator 模擬器讓我們選擇不同畫面尺寸，方便測試應用在不同畫面的運行情況。
+
+
+
+---
+
 # Xcode 介面介紹
 
 ---
@@ -171,7 +191,7 @@ iOS 2.0 SDK
 
 ---
 
-掌握左中右最基本的功能便可以開始 iOS 編程。
+掌握 **左中右**的基本功能便可以開始 iOS 編程
 
 ---
 
@@ -185,6 +205,31 @@ iOS 2.0 SDK
 
 ---
 ![](/slides/images/3-panel-toggles-explain.jpg)
+
+---
+
+# 開發 iOS App，我應該選擇 Objective-C 還是 Swift 語言？
+
+![](/slides/images/languages.jpg)
+
+---
+
+Objective-C 提倡 Message Passing，即 Call function 是溝通，而不是命令。
+
+所以用 Objective-C 寫出來的語句很像在說英文。例如：
+
+```objc
+[gameObject placeAtX: 123 andY: 456];
+```
+
+---
+
+為了更好地推廣編程學習，蘋果便於數年前推出了 Swift 語言。
+現在 Swift 語言已經趨向穩定成熟，而且網上的新教材基本上都使用 Swift 語言了。
+
+---
+
+所以，如果現在開始學寫 iOS 應用，直接選擇 Swift 是擁抱未來的好選擇。
 
 ---
 
