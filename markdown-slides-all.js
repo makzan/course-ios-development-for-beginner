@@ -113,12 +113,33 @@ var swiper = new Swiper('main.slides', {
 
 /* global jQuery */
 
+// Read a page's GET URL variables and return them as an associative array.
+// https://stackoverflow.com/a/4656873
+function getUrlVars()
+{
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++)
+    {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+
 ;(function($){
 
   $(document).on("ready", function(){
+    
+    var queryParams = getUrlVars();
+    var md_file = "sample.md";
+    if (queryParams["md"] != null) {
+      md_file = queryParams["md"];
+    }
 
-    $.get("/sample.md", function(data){
-      $("textarea.raw-markdown").val(data);
+    $.get("/" + md_file, function(data){
+      $("textarea.raw-markdown").text(data);
       setupSlides();
     });
     
