@@ -57,7 +57,7 @@ if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
 
-$.get("/" + md_file + ".md", function(data){
+$.get("/slides/" + md_file + ".md", function(data){
   $("textarea.raw-markdown").text(data);
   setupSlides();
 });
