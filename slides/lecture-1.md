@@ -280,18 +280,18 @@ NIB → XIB → Storyboard
 
 ---
 
-<div style="padding:68.49% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/293524239?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe src="https://player.vimeo.com/video/293524239?color=ff9933&byline=0&portrait=0" width="800" height="548" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 
 ---
 
-<div style="padding:68.57% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/293523608?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe src="https://player.vimeo.com/video/293523608?color=ff9933&byline=0&portrait=0" width="800" height="549" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ---
 
 # 包剪揼例子
 
-<div style="padding:64.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/259699882?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+<iframe src="https://player.vimeo.com/video/259699882?color=ff9933&byline=0&portrait=0" width="800" height="514" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ---
 # Conclusion of Lecture 1
