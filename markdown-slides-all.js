@@ -117,39 +117,44 @@ var swiper = new Swiper('main.slides', {
 
   $(document).on("ready", function(){
 
-
-
-    // set meta background opacity.
-    $(".slide-meta[data-opacity]").each(function() {
-      var opacity = $(this).data('opacity');
-      console.log(opacity);
-      $(this).parents(".swiper-slide").find(".slide-background").css('opacity', opacity);
+    $.get("/sample.md", function(data){
+      $("textarea.raw-markdown").val(data);
+      setupSlides();
     });
+    
+    function setupSlides() {
+      // set meta background opacity.
+      $(".slide-meta[data-opacity]").each(function() {
+        var opacity = $(this).data('opacity');
+        console.log(opacity);
+        $(this).parents(".swiper-slide").find(".slide-background").css('opacity', opacity);
+      });
 
-    // merge teaching captions.
-    $(".swiper-slide").each(function() {
-      if ($(this).find(".teaching-caption").length > 1) {
-        var first = $(this).find(".teaching-caption").get(0);
-        $(this).find(".teaching-caption").each(function() {
-          if (this != first) {
-            $(first).append( "<br>" + $(this).html() );
-            $(this).remove();
-          }
-        });
+      // merge teaching captions.
+      $(".swiper-slide").each(function() {
+        if ($(this).find(".teaching-caption").length > 1) {
+          var first = $(this).find(".teaching-caption").get(0);
+          $(this).find(".teaching-caption").each(function() {
+            if (this != first) {
+              $(first).append( "<br>" + $(this).html() );
+              $(this).remove();
+            }
+          });
 
-      }
-    });
+        }
+      });
 
-    // move all meta DOM into .meta
-    $(".swiper-slide").each(function() {
-      var bg = $(this).find(".bg");
-      var meta = $(this).find(".meta");
+      // move all meta DOM into .meta
+      $(".swiper-slide").each(function() {
+        var bg = $(this).find(".bg");
+        var meta = $(this).find(".meta");
 
-      $(this).find(".slide-background-container").appendTo(bg);
-      $(this).find(".slide-meta").appendTo(meta);
-      $(this).find(".caption").appendTo(meta);
-      $(this).find(".teaching-caption").appendTo(meta);
-    });
+        $(this).find(".slide-background-container").appendTo(bg);
+        $(this).find(".slide-meta").appendTo(meta);
+        $(this).find(".caption").appendTo(meta);
+        $(this).find(".teaching-caption").appendTo(meta);
+      });
+    }    
 
   });
 
