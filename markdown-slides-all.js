@@ -135,7 +135,7 @@ function setupSlides() {
             }
           });
         });
-        
+
         // set meta background opacity.
         $(".slide-meta[data-opacity]").each(function() {
           var opacity = $(this).data('opacity');
@@ -167,10 +167,48 @@ function setupSlides() {
           $(this).find(".caption").appendTo(meta);
           $(this).find(".teaching-caption").appendTo(meta);
         });
-        
-        
+
+
       },
     },
   });
 }
+
+
+// Image Viewer
+// https://github.com/makzan/Minimal-Image-Viewer-JS/blob/master/minimal-image-viewer.coffee
+var hide_overlay, i, img_elm, img_elms, len, overlay_caption_elm, overlay_elm, overlay_img_elm;
+
+// Image Zooming
+overlay_elm = document.getElementById('overlay');
+
+overlay_img_elm = document.getElementById('overlay-img');
+
+overlay_caption_elm = document.getElementById('overlay-caption');
+
+hide_overlay = function() {
+  if (overlay_elm) {
+    return overlay_elm.classList.add('out');
+  }
+};
+
+if (overlay_elm) {
+  overlay_elm.onclick = function(e) {
+    return hide_overlay();
+  };
+  img_elms = document.querySelectorAll('img');
+  for (i = 0, len = img_elms.length; i < len; i++) {
+    img_elm = img_elms[i];
+    img_elm.onclick = function(e) {
+      overlay_img_elm.src = this.src;
+      overlay_caption_elm.textContent = this.alt;
+      return overlay_elm.classList.remove('out');
+    };
+  }
+}
+
+// Scrolling and Image Zooming
+window.onscroll = function(e) {
+  return hide_overlay();
+};
 
