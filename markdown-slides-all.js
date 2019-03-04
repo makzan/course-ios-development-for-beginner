@@ -52,12 +52,12 @@ function getUrlVars()
 // Markdown Slides Player
 
 var queryParams = getUrlVars();
-var md_file = "sample.md";
+var md_file = "sample";
 if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
 
-$.get("/" + md_file, function(data){
+$.get("/" + md_file + ".md", function(data){
   $("textarea.raw-markdown").text(data);
   setupSlides();
 });
