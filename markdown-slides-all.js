@@ -57,7 +57,7 @@ if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
 
-$.get("/slides/" + md_file + ".md", function(data){
+$.get("/slides/" + md_file, function(data){
   $("textarea.raw-markdown").text(data);
   setupSlides();
 });
@@ -73,7 +73,9 @@ function setupSlides() {
 
   var markdownText = $("textarea").val();
   var md = window.markdownit({
-    html: true
+    html: true,
+    linkify: true,
+    langPrefix: 'lang-',
   });
 
   var markdownSlides = markdownText.split("---");
