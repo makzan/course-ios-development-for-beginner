@@ -9,6 +9,7 @@ CM420-03-2019-c
 1. Join the classroom
 2. Who is Makzan
 3. iOS 開發背景
+4. 使用 Storybaord
 
 ---
 
@@ -254,7 +255,54 @@ Objective-C 提倡 Message Passing，即 Call function 是溝通，而不是命�
 
 ---
 
-THE END
+# Agenda 4: 使用 Storybaord
+
+---
+
+# 使用 Storybaord 建立 App Prototype
+
+---
+
+![](/slides/images/storyboard-example.jpg)
+
+---
+
+在撰寫第一行代碼之前，
+我們可以純用 Storyboard 生成頗為完整的原型 Prototype。
+當然，有條件判斷的 Prototype 還是須要寫少量代碼的。
+
+---
+
+# Storyboard 的前世今生
+
+NIB → XIB → Storyboard
+
+
+---
+
+<div style="padding:68.49% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/293524239?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+
+---
+
+<div style="padding:68.57% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/293523608?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+---
+
+# 包剪揼例子
+
+<div style="padding:64.29% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/259699882?color=ff9933&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+---
+# Conclusion of Lecture 1
+
+1. Join the classroom
+2. Who is Makzan
+3. iOS 開發背景
+4. 使用 Storybaord
+
+---
+End of Lecture 1
 
 
 
