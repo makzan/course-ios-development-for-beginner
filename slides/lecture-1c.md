@@ -1,4 +1,4 @@
-# Lecture 1
+# Lecture 1c
 
 CM420-03-2019-c
 
@@ -6,19 +6,13 @@ CM420-03-2019-c
 
 # Agenda
 
-1. Join the classroom
-2. Who is Makzan
-3. iOS 開發背景
-4. 使用 Storybaord
+1. Using Storyboard
+2. Building App Prototype
+3. Navigation Controller
 
 ----
 
-
-# Agenda 4: 使用 Storybaord
-
-----
-
-# 使用 Storybaord 建立 App Prototype
+# Building app prototype with Storyboard
 
 ----
 
@@ -26,59 +20,66 @@ CM420-03-2019-c
 
 ----
 
-在撰寫第一行代碼之前，
-我們可以純用 Storyboard 生成頗為完整的原型 Prototype。
-當然，有條件判斷的 Prototype 還是須要寫少量代碼的。
+Before we write the single line of code, we can build app prototype solely on Storyboard.
+
 
 ----
 
-# Storyboard 的前世今生
+# History of Storyboard
 
 NIB → XIB → Storyboard
 
+----
+^ History of Storyboard
+
+1. At first, we have separated Interface Builder software alongside Xcode. The interface file of single view is `nib`.
+2. Then Interface Builder merges into Xcode and change the file type to `xib`, which uses XML for internal formation representation.
+3. Then Storyboard groups multiple views into a single file and we can define relationship between view controllers in user interface.
+----
+
+Before Storyboard, we need to write programming code to tell iOS to push or present the next view controller.
+
+By using Storyboard, we can define this relationship in user interface.
 
 ----
+^ Example of presenting a 2nd view in Storyboard
 
 <iframe src="https://player.vimeo.com/video/293524239?color=ff9933&byline=0&portrait=0" width="800" height="548" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+----
 
+Please note that we cannot dismiss presented view controller in Storyboard yet. We need to write code to dismiss it.
 
 ----
+
+# Navigation Controller
+
+----
+^ Hierarchy of view controllers
+![](/slides/images/hierarchy.png)
+
+----
+
+- Navigation Controller allows us to define hierarchy and manage a stack of view controllers.
+- Navigation controller allows me to connect scene and going back via the back button on upper left.
+- When the previous page has title, the back button on upper left shows the title of previous view controller.
+
+----
+^ There is huge difference between Android’s back button and back button on UINavigationController.
+
+![](/slides/images/back-button-in-android-and-ios.png)
+----
+By showing the title on previous view, we can confirm where we are now in the hierarchy. That’s why it has the name `Navigation`.
+----
+
+^ Example of using navigation controller
 
 <iframe src="https://player.vimeo.com/video/293523608?color=ff9933&byline=0&portrait=0" width="800" height="549" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-----
-
-# 包剪揼例子
-
-<iframe src="https://player.vimeo.com/video/259699882?color=ff9933&byline=0&portrait=0" width="800" height="514" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 ----
+End of Lecture 1c
 
-# 製作包剪揼小應用
 
-----
 
-^成果預覽
 
-![](https://onionslides.com/system/media/uploads/000/000/214/original/4416-Screen_Shot_2018-03-13_at_1.43.22_AM.png)
-
-----
-
-^選擇新項目後，選擇 Single View App
-
-![](https://onionslides.com/system/media/uploads/000/000/001/large/xcode-new-single-view-app.png)
-
-----
-
-^在新專案中，輸入應用名稱，Identifier 通常是網址。如沒有，也可以是個人名稱
-
-![](https://onionslides.com/system/media/uploads/000/000/215/original/4456-xcode-new-project-detail.png)
-
-----
-
-^在左上方的控制中，我們可以執行應用。亦可以選擇在不同的摸擬器中執行
-
-![](https://onionslides.com/system/media/uploads/000/000/216/original/4448-xcode-choose-view-controller.png)
-
-----
 
