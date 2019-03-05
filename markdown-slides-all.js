@@ -79,7 +79,7 @@ function setupSlides() {
     breaks: true,
   });
 
-  var markdownSlides = markdownText.split("---");
+  var markdownSlides = markdownText.split("----");
 
   index = 1;
   for (var slideText of markdownSlides) {

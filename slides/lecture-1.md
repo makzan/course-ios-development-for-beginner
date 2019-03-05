@@ -1,75 +1,77 @@
-# Lecture 1
+# Lecture 1a—Prepare for the Lecture
 
 CM420-03-2019-c
 
----
+----
 
 # Agenda
 
-1. Join the classroom
+1. Joining the classroom
 2. Who is Makzan
-3. iOS 開發背景
-4. 使用 Storybaord
 
----
+----
 
-# Agenda 1: Join the classroom
+# Agenda 1: Joining the classroom
 
----
+----
 
 # Join the classroom
 
 https://makclass.com/join/cm420
 
----
+----
 
 # What is MakClass ?
 
-派發教材、練習、交流的網上平台
+Handouts, Exercises, Exchange Platform
 
----
+----
 
 # Agenda 2: Who is Makzan
 
----
+----
 
-# 關於 Makzan
+# About Makzan
 
-自 2010 年推出 iPad 起投入開發 iOS 遊戲及應用程式。在 iPad 首發當天，我的第一隻遊戲就在 App Store 上架。
+- Release my first iPad game on 2010
+- The game was released on the first day iPad debut.
+- I used only simulator to test the first version of the game.
+- I had my first iPad 1 week on hand to test after it debut.
 
----
+----
+![](/slides/images/fishball.jpg)
 
-![Fish ball game screenshot](/slides/images/fishball.jpg)
+----
+![](/slides/images/chicken-rain.jpg)
 
----
 
-![Chicken Rain game screenshot](/slides/images/chicken-rain.jpg)
+----
 
----
-
-# 過往開發亮點
+# My iOS Development Highlights
 
 - Fish Ball game
 - Chicken Rain app
-- 音樂 app
+- Music Utility app
 - Music Player app
-- AR app
-- Unity games
+- Augmented Reality app
+- Unity3D games
 - Multiplayers game
 
----
+----
 
-# 你可以從以下途徑找到我：
+# Where to find me?
 
-- 網站：https://makzan.net
+- Website：https://makzan.net
 - Github：https://github.com/makzan
-- 推特：https://twitter.com/makzan
+- Twitter：https://twitter.com/makzan
 - FB：https://fb.com/makzan
+----
+^ Where to find me?
 
----
+mak**@makzan**.net
+----
 
 
-End of Lecture 1, Agenda 1, 2
-
+End of Lecture 1a
 
 

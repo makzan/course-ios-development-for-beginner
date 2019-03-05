@@ -1,206 +1,265 @@
-# Lecture 1
+# Lecture 1b
 
 CM420-03-2019-c
 
----
+----
 
 # Agenda
 
-1. Join the classroom
-2. Who is Makzan
-3. iOS 開發背景
-4. 使用 Storybaord
+1. iOS Development Background
+2. Xcode IDE
 
----
+----
 
-# Agenda 3: iOS 開發背景
+# Tools we need to develop iOS app
 
----
-
-# 製作 iOS 應用，須要什麼工具？
-
-- Mac
+- a Mac
 - Xcode
 - iOS Simulator
 - Developer Apple ID
+----
 
----
+# Macintosh
 
-# 將 Xcode 上的 iOS 專案發佈到 iPhone / iPad 上
+Xcode, the development environment, runs only on macOS X.
 
-自從 iOS 9 以後，只要註冊免費 Apple ID 帳號，
-就可以通過直接 USB 連接手機及 Xcode 暫寫中的應用程式直接放到手機上運行
+- Mac mini
+- Macbook
+- MacBook Air
+- MacBook Pro
+- iMac
+- iMac Pro
+
+----
+
+It is better to have bigger screen for the user interface development.
+
+----
+
+# Deploy iOS on iPhone via Xcode
+
+Previously, developers were required to pay USD99 to deploy apps on iOS device.
+
+Since iOS 9, we only need free developer account to deploy apps on iOS device through Xcode.
 
 
----
 
-# iOS 開發的歷史
+----
+![](/slides/images/xcode-welcome-screen.jpg)
 
----
+----
 
-![Xcode welcome screen](/slides/images/xcode-welcome-screen.jpg)
+# iOS Development History
 
----
+----
 
-# 2007
+# 2007: iPhone debut
 
-Web App
+Steven Jobs promotes writing Web App on iOS.
 
----
+----
 
-# 2008
+# 2008: iOS 2.0 SDK released
 
-iOS 2.0 SDK
+We can develop native app on iPhone.
+----
 
----
+# 2010: iPad debut
 
-# iOS 系統背景
+We have 2 screen sizes now.
 
----
+----
 
-^ iOS 系統背景
+# Operating System on iOS
 
-# 底層 + UI
+----
 
-- macOS X 的 Darwin Unix 系統
-- 加上專門為 Touch 而設計的 **UIKit**
+^ Operating System on iOS
 
----
+# Darwin Unix + UIKit
+
+- macOS X’s Darwin Unix system
+- **UIKit**—Designed for touch input
+
+----
 
 # Prefix Namespace
 
-蘋果系統的 Class 是使用 Prefix 來做 Namespacing 的
+There is no package name spacing in iOS.
 
----
+We use Prefix to name space different classes into different modules.
 
-例如專門給 iOS 用的界面就是 UI 字開頭，
-如 UIView, UILabel, UIButton 等
+----
 
----
+^ Prefix name spacing
 
-遊戲用的 SpriteKit 就有 SKView, SKScene, SKNode 等
+e.g. UIKit module with UIView, UILabel, UIButton.
 
----
+----
 
-位置相關的 CoreLocation 就有 CLLocationManager 等。
+^ Prefix name spacing
 
----
+SpriteKit game framework with SKView, SKScene, SKNode classes.
 
-而數據類型 NSData, NSArray 等，
-其 NS 則是遺傳自 Mac OS X 的前身：NextStep 電腦
+----
 
----
+^ Prefix name spacing
 
-在 Swift 世界，`NS` 字頭開始被無字頭取代。
+CoreLocation framework with CLLocationManager.
+
+----
+
+^ Prefix name spacing
+
+Data structure with NSData, NSArray etc.
+
+----
+
+# NextStep
+
+`NS` stands for NextStep. The computer Steve Jobs built around 1990s.
+----
+
+We can tell, even iOS is just 12 years old, it has a much longer OS history because of the Darwin and NextStep System history.
+
+----
+When Apple releases Swift, it also remove the `NS` name space on data structures.
 
 - NSData → Data
 - NSArray → Array
 - NSUserDefaults → UserDefaults
 
----
+----
 
-注：這個去 NS 化過程，未必是等效的。例如 NSArray 及 Array 就是兩種不同的類型。
+Please note that the `NS` removal is not necessary the same.
 
----
+- `NSArray` and `Array` is different
+- `NSUserDefaults` and `UserDefaults` is the same
 
-# iOS 系統版本與更新
 
-一般最近兩代系統使用佔有率會[超過 95%](https://mixpanel.com/trends/#report/ios_12/from_date:-31,report_unit:week,to_date:0)
+----
 
----
+# iOS version support
+
+Normally, we only need to support the latest 2 iOS versions.
+
+The latest 2 versions has [more than 95% adoption](https://mixpanel.com/trends/#report/ios_12/from_date:-31,report_unit:week,to_date:0).
+
+----
 
 # iOS Simulator
 
 ![](/slides/images/ios-simulator.jpg)
 
----
+----
 
-在我們落實體機試之前，我們一般會利用 Xcode 跟來的模擬器進行測試。
+Before we deploy apps on device, we occasionally deploy apps to simulator for testing.
 
----
+----
 
 ![](/slides/images/ios-simulator-choices.jpg)
 
----
+----
 
-iOS Simulator 模擬器讓我們選擇不同畫面尺寸，方便測試應用在不同畫面的運行情況。
+iOS Simulator provides us different screen sizes so that we can preview how our apps look like in different devices.
 
 
 
----
+----
 
-# Xcode 介面介紹
+# Xcode Interface
 
----
+----
 
-![Xcode IDE](/slides/images/xcode-ide.jpg)
+![](/slides/images/xcode-ide.jpg)
 
----
+----
 
-掌握 **左中右**的基本功能便可以開始 iOS 編程
+The key point to master Xcode IDE is to master the **left-center-right** panels.
 
----
+----
 
-- 左邊：檔案 Tab
-- 中間：主要編輯區域
-- 右邊：與主編輯項目有關的屬性
+- Left: File panel
+- Center: Main editor
+- Right: Attributes related to the selected item
 
----
+----
 
 ![](/slides/images/3-panel-toggles.jpg)
 
----
+----
 ![](/slides/images/3-panel-toggles-explain.jpg)
 
----
+----
 
-# 開發 iOS App，我應該選擇 Objective-C 還是 Swift 語言？
+# Objective-C or Swift?
 
 ![](/slides/images/languages.jpg)
 
----
+----
 
-Objective-C 提倡 Message Passing，即 Call function 是溝通，而不是命令。
+It has been several years since Swift is released. Swift has become stable after years of improvement. New frameworks and tutorials are all written in Swift. It is time to adopt Swift.
 
-所以用 Objective-C 寫出來的語句很像在說英文。例如：
+----
+
+In Objective-C, we recommend **Message Passing** instead of **Function Calling**.
+
+The difference is that message passing is a request to other object while function calling is a command to other object.
+
+----
+
+It is like speaking English when writing Objective-C:
 
 ```objc
 [gameObject placeAtX: 123 andY: 456];
 ```
 
----
+----
 
-為了更好地推廣編程學習，蘋果便於數年前推出了 Swift 語言。
-現在 Swift 語言已經趨向穩定成熟，而且網上的新教材基本上都使用 Swift 語言了。
+Alternatively, we can write Objective-C message passing by aligning with the colon column:
 
----
+```objc
+[gameObject placeAtX: 123
+                   y: 456];
+```
 
-所以，如果現在開始學寫 iOS 應用，直接選擇 Swift 是擁抱未來的好選擇。
+----
 
----
+The method name includes all parameter name and the colon. So the method name is `placeAtX:y:`.
 
-# 一個項目的常用檔案
+----
 
----
+Similar Swift code would be:
 
-^ 一個項目的常用檔案
+```
+gameObject.placeAt(x:123, y:456)
+```
+
+----
+
+We can tell that Swift has a modern syntax while the same philosophy from Objective-C.
+
+----
+
+# Useful files in a project
+
+----
+
+^ Useful files in a project
 
 ![](/slides/images/file-panel.jpg)
 
----
+----
 
-^ 一個項目的常用檔案
+^ Useful files in a project
 
-- `AppDelegate.swift` 負責控制檔案的 Life Cycle
-- `Info.plist` 是應用程式的系統設定，例如於 Home Screen 顯示的名稱、需要的權限及說明文字
-- `Main.storyboard` 是主要的介面檔案，如果是簡單的應用程式，這個檔案可以包含整個 App 的所有界面
-- `LaunchScreen.storyboard` 是打開 App 時，未完成載入期間，用戶望到的第一個個畫面。
-- `Assets.xcassets` 裝著一群群的圖片檔案，例如 App Icon，App Icon 有不同的尺寸以符合不同機種及使用情景。
-- `ViewController.swift` 是預設 Single View App 的範本檔案，是第一個畫面背後的程序碼。
-
-
----
-End of Lecture 1, Agenda 3
+- `AppDelegate.swift` handles the application **life cycle**.
+- `Info.plist` Configure the application, such as application name on home screen and text to display on permission dialog.
+- `Main.storyboard` is the main file for defining user interface.
+- `LaunchScreen.storyboard` is the user interface our user see during the app launching stage. Beware to not confuse this file with the `Main.storyboard` file.
+- `Assets.xcassets` contains the group of image files for icon on home screen and images assets for image view inside the app.
+- `ViewController.swift` is the default view controller source code for Single View App template. We will create more `UIViewController` classes later. For example, `HomeViewController`, `LoginViewController`
 
 
-
+----
+End of Lecture 1b
