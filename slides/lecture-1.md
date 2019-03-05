@@ -68,7 +68,8 @@ Handouts, Exercises, Exchange Platform
 ----
 ^ Where to find me?
 
-mak**@makzan**.net
+mak<b>@makzan</b>.net
+
 ----
 
 
