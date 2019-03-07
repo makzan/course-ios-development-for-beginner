@@ -175,6 +175,11 @@ function setupSlides() {
 }
 
 
+if (window.self != window.top) {
+	$("body").addClass('in-iframe');
+}
+
+
 // Image Viewer
 // https://github.com/makzan/Minimal-Image-Viewer-JS/blob/master/minimal-image-viewer.coffee
 var hide_overlay, i, img_elm, img_elms, len, overlay_caption_elm, overlay_elm, overlay_img_elm;
@@ -211,4 +216,7 @@ if (overlay_elm) {
 window.onscroll = function(e) {
   return hide_overlay();
 };
+
+
+
 
