@@ -2,75 +2,34 @@
 
 CM420-03-2019-c
 
-----
-
-# Agenda
-
-1. Joining the classroom
-2. Who is Makzan
-
-----
-
-# Agenda 1: Joining the classroom
-
-----
+---- 
 
 # Join the classroom
 
 https://makclass.com/join/cm420
-
-----
+---- 
+![](/slides/images/classroom.png)
+---- 
 
 # What is MakClass ?
 
 Handouts, Exercises, Exchange Platform
 
-----
+---- 
+^ There are different types of classmates, some of them are slides, some of them are code snippets.
 
-# Agenda 2: Who is Makzan
+![](/slides/images/classnote-view.png)
 
-----
+---- 
+^ You can comment on any note at the bottom of the page.
 
-# About Makzan
+![](/slides/images/comment.png)
+---- 
+^ Whenever you have questions, please don’t hesitate to ask me via “Ask Thomas” button on the upper right.
 
-- Release my first iPad game on 2010
-- The game was released on the first day iPad debut.
-- I used only simulator to test the first version of the game.
-- I had my first iPad 1 week on hand to test after it debut.
+![](/slides/images/ask-thomas.png)
 
-----
-![](/slides/images/fishball.jpg)
-
-----
-![](/slides/images/chicken-rain.jpg)
-
-
-----
-
-# My iOS Development Highlights
-
-- Fish Ball game
-- Chicken Rain app
-- Music Utility app
-- Music Player app
-- Augmented Reality app
-- Unity3D games
-- Multiplayers game
-
-----
-
-# Where to find me?
-
-- Website：https://makzan.net
-- Github：https://github.com/makzan
-- Twitter：https://twitter.com/makzan
-- FB：https://fb.com/makzan
-----
-^ Where to find me?
-
-mak<b>@makzan</b>.net
-
-----
+---- 
 
 
 End of Lecture 1a
