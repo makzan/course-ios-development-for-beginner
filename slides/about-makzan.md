@@ -1,10 +1,9 @@
 
 # About Makzan
 
-- Release my first iPad game on 2010
+- Released my first iPad game on 2010
 - The game was released on the first day iPad debut.
-- I used only simulator to test the first version of the game.
-- I had my first iPad 1 week on hand to test after it debut.
+- Published 5 books about [web technologies](https://leanpub.com/u/makzan) and [game development](https://www.amazon.com/s?i=digital-text&rh=p_27%3AMakzan).
 
 ---- 
 ![](/slides/images/fishball.jpg)
@@ -36,4 +35,4 @@
 ---- 
 ^ Where to find me?
 
-mak**@makzan**.net
+mak<b>@makzan</b>.net
