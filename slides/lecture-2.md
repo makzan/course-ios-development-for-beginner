@@ -21,25 +21,25 @@ This is done via assigning the ViewController reference (cmd+option+3) in the Vi
 
 ---- 
 
-![](view-controller-reference.png)
+![](/slides/images/view-controller-reference.png)
 
 ^ On the third tab on right panel, it defines the custom class for the selected interface element.
 
 ---- 
 
-![](view-controller.png)
+![](/slides/images/view-controller.png)
 
 ^ If we select the left yellow icon on top of the interface, we select the `View Controller`.
 
 ---- 
 
-![](interface-sidebar.png)
+![](/slides/images/interface-sidebar.png)
 
 ^ It is also selectable via the interface sidebar.
 ---- 
 ^Then, we can assign view controller class on the third tab.
 
-![](custom-class.png)
+![](/slides/images/custom-class.png)
 
 ---- 
 
@@ -74,7 +74,7 @@ There are 2 important concepts when we refer the interface elements in code. The
 ---- 
 If the source code on the right side doesn’t match the interface, we may check the upper navigation bar on the assistant editor.
 ---- 
-![](navigation-tab.png)
+![](/slides/images/navigation-tab.png)
 ---- 
 ## Naming rule for IBOutlet and IBAction
 ---- 
