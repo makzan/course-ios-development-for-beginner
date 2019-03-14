@@ -12,6 +12,7 @@ var name = "iOS Development"
 ```swift
 let constant = 123
 ```
+---- 
 
 
 ## Type
