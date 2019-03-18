@@ -55,6 +55,7 @@ Please note that we cannot dismiss presented view controller in Storyboard yet. 
 
 ----
 ^ Hierarchy of view controllers
+
 ![](./images/hierarchy.png)
 
 ----
