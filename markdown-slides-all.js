@@ -75,6 +75,11 @@ $.get(md_file, function(data){
   }
 });
 
+// setup reader and slider mode link
+var urlFragments = location.href.split("?");
+$("#reader-mode-link").attr('href', urlFragments[0] + "?mode=reader" + urlFragments[1].replace("mode=reader",""));
+$("#slider-mode-link").attr('href', urlFragments[0] + "?mode=slider" + urlFragments[1].replace("mode=slider",""));
+
 function setupReader() {
   var md = window.markdownit({
     html: true,
