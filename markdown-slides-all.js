@@ -57,10 +57,34 @@ if (queryParams["md"] != null && queryParams["md"] != "" && queryParams["md"] !=
   md_file = queryParams["md"];
 }
 
+var mode = 'slide';
+if (queryParams["mode"] == "reader") {
+  mode = "reader";
+}
+
 $.get(md_file, function(data){
   $("textarea.raw-markdown").text(data);
-  setupSlides();
+
+  if (mode == "slide") {
+    setupSlides();
+  }
+  if (mode == "reader") {
+    setupReader();
+  }
 });
+
+function setupReader() {
+  var md = window.markdownit({
+    html: true,
+    linkify: true,
+    langPrefix: 'lang-',
+    breaks: true,
+  });
+  var markdownText = $("textarea").val();
+  var result = md.render(markdownText);
+
+  $("body").append(`<main>${result}</main>`);
+}
 
 function setupSlides() {
 
