@@ -20,7 +20,11 @@ body {
   font-family: sans-serif;
   max-width: 1200px;
   margin: auto;
-  padding-top: 1em;
+  margin-top: 2em;
+}
+
+body.reader {
+  padding: 1em;
 }
 
 body.in-iframe {
@@ -28,9 +32,23 @@ body.in-iframe {
 	margin: 0;
 }
 
-img, video {
+img, video, iframe {
   max-width: 100%;
 }
+
+#top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,.9);
+  padding: .5em 1em;
+  color: white;
+}
+#top-bar a {
+  color: white;
+}
+
 .reading-mode section.slide {
   border-bottom: 1px solid lightgrey;
 }

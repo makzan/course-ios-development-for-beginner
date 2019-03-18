@@ -57,15 +57,17 @@ if (queryParams["md"] != null && queryParams["md"] != "" && queryParams["md"] !=
   md_file = queryParams["md"];
 }
 
-var mode = 'slide';
+var mode = 'slider';
 if (queryParams["mode"] == "reader") {
   mode = "reader";
 }
 
+$("body").addClass(mode);
+
 $.get(md_file, function(data){
   $("textarea.raw-markdown").text(data);
 
-  if (mode == "slide") {
+  if (mode == "slider") {
     setupSlides();
   }
   if (mode == "reader") {
