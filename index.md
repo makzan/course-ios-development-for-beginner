@@ -7,3 +7,7 @@
 - [Lecture 2](?md=lecture-2.md)
 - [Lecture 3](?md=lecture-3.md)
 - [Lecture 4](?md=lecture-4.md)
+- [Lecture 5](?md=lecture-5.md)
+- [Lecture 5 Lab 1](?mode=reader&md=lecture-5-lab-1.md)
+- [Lecture 5 Lab 2](?mode=reader&md=lecture-5-lab-2.md)
+- [Lecture 5 Lab 3](?mode=reader&md=lecture-5-lab-3.md)
