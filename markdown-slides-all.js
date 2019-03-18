@@ -52,7 +52,7 @@ function getUrlVars()
 // Markdown Slides Player
 
 var queryParams = getUrlVars();
-var md_file = "sample";
+var md_file = "index";
 if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
@@ -63,7 +63,6 @@ $.get(md_file, function(data){
 });
 
 function setupSlides() {
-  $("#toc").hide();
 
   $("body").append(`<main class="slides reading-mode">
     <div class="swiper-wrapper"></div>
