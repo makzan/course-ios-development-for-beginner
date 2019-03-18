@@ -50,12 +50,18 @@ img, video, iframe {
 }
 #top-bar a {
   color: white;
-  text-decoration: none;
+  /*text-decoration: none;*/
+}
+
+body.reader hr {
+  border: 0;
+  border-bottom: 1px dashed #ccc;
 }
 
 .reading-mode section.slide {
   border-bottom: 1px solid lightgrey;
 }
+
 textarea.raw-markdown {
   display: none;
 }
