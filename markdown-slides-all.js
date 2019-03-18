@@ -52,8 +52,8 @@ function getUrlVars()
 // Markdown Slides Player
 
 var queryParams = getUrlVars();
-var md_file = "index";
-if (queryParams["md"] != null && queryParams["md"] != "") {
+var md_file = "index.md";
+if (queryParams["md"] != null && queryParams["md"] != "" && queryParams["md"] != "index") {
   md_file = queryParams["md"];
 }
 
