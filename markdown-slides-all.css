@@ -32,6 +32,10 @@ body.in-iframe {
 	margin: 0;
 }
 
+body.in-iframe.reader {
+  padding: 1em;
+}
+
 img, video, iframe {
   max-width: 100%;
 }
