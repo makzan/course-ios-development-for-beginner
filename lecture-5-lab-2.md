@@ -10,6 +10,7 @@ In this lab, we will use `segue` to pass variables into the second view controll
 ## Background / Scenario
 
 Storyboard connection between two view controllers are done automatically by operating system. Still we want to pass in different values to the next view controller according to different code logic.
+
 ----
 ## Required Resources
 

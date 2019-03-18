@@ -1,6 +1,7 @@
 # Lecture 5 Lab 1 — Pushing SafariViewController
 
 In this lab, we will show an external website by pushing in a Safari View Controller.
+
 ----
 ## Objectives
 
@@ -11,6 +12,7 @@ In this lab, we will show an external website by pushing in a Safari View Contro
 ## Background / Scenario
 
 In this lab, we will show an external website by pushing in a Safari View Controller. There are 3 view controllers that are related to displaying web content. They are `UIWebViewController`, `WKWebViewController` and `SFSafariViewController`.
+
 ----
 ## Required Resources
 
