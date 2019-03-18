@@ -45,7 +45,7 @@ Since iOS 9, we only need free developer account to deploy apps on iOS device th
 
 
 ----
-![](/slides/images/xcode-welcome-screen.jpg)
+![](./images/xcode-welcome-screen.jpg)
 
 ----
 
@@ -149,7 +149,7 @@ The latest 2 versions has [more than 95% adoption](https://mixpanel.com/trends/#
 
 # iOS Simulator
 
-![](/slides/images/ios-simulator.jpg)
+![](./images/ios-simulator.jpg)
 
 ----
 
@@ -157,7 +157,7 @@ Before we deploy apps on device, we occasionally deploy apps to simulator for te
 
 ----
 
-![](/slides/images/ios-simulator-choices.jpg)
+![](./images/ios-simulator-choices.jpg)
 
 ----
 
@@ -171,7 +171,7 @@ iOS Simulator provides us different screen sizes so that we can preview how our 
 
 ----
 
-![](/slides/images/xcode-ide.jpg)
+![](./images/xcode-ide.jpg)
 
 ----
 
@@ -185,16 +185,16 @@ The key point to master Xcode IDE is to master the **left-center-right** panels.
 
 ----
 
-![](/slides/images/3-panel-toggles.jpg)
+![](./images/3-panel-toggles.jpg)
 
 ----
-![](/slides/images/3-panel-toggles-explain.jpg)
+![](./images/3-panel-toggles-explain.jpg)
 
 ----
 
 # Objective-C or Swift?
 
-![](/slides/images/languages.jpg)
+![](./images/languages.jpg)
 
 ----
 
@@ -247,7 +247,7 @@ We can tell that Swift has a modern syntax while the same philosophy from Object
 
 ^ Useful files in a project
 
-![](/slides/images/file-panel.jpg)
+![](./images/file-panel.jpg)
 
 ----
 

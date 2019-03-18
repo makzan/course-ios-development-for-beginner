@@ -16,7 +16,7 @@ CM420-03-2019-c
 
 ----
 
-![](/slides/images/storyboard-example.jpg)
+![](./images/storyboard-example.jpg)
 
 ----
 
@@ -55,7 +55,7 @@ Please note that we cannot dismiss presented view controller in Storyboard yet. 
 
 ----
 ^ Hierarchy of view controllers
-![](/slides/images/hierarchy.png)
+![](./images/hierarchy.png)
 
 ----
 
@@ -66,7 +66,7 @@ Please note that we cannot dismiss presented view controller in Storyboard yet. 
 ----
 ^ There is huge difference between Android’s back button and back button on UINavigationController.
 
-![](/slides/images/back-button-in-android-and-ios.png)
+![](./images/back-button-in-android-and-ios.png)
 ----
 By showing the title on previous view, we can confirm where we are now in the hierarchy. That’s why it has the name `Navigation`.
 ----
