@@ -57,12 +57,14 @@ if (queryParams["md"] != null && queryParams["md"] != "") {
   md_file = queryParams["md"];
 }
 
-$.get("/slides/" + md_file, function(data){
+$.get(md_file, function(data){
   $("textarea.raw-markdown").text(data);
   setupSlides();
 });
 
 function setupSlides() {
+  $("#toc").hide();
+
   $("body").append(`<main class="slides reading-mode">
     <div class="swiper-wrapper"></div>
     <div class="swiper-scrollbar"></div>
