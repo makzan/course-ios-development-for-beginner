@@ -14,7 +14,7 @@ We will use [AlamoFire](https://github.com/Alamofire/Alamofire) to fetch the JSO
 
 ----
 
-^[](images/library-app-frameworks.png)
+![](images/library-app-frameworks.png)
 
 ----
 
